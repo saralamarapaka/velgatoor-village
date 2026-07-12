@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JAGTIAL DISTRICT - VELGATOOR MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>JAGTIAL DISTRICT</h1>
+<h2>VELGATOOR MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+  <!-- 1 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚌</div>
+        <div class="info">
+            <h3>VEI-Bus Stop</h3>
+            <p>Bus Stop</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84856,79.16974" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏦</div>
+        <div class="info">
+            <h3>VEI-Bank</h3>
+            <p>Bank</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84564,79.17264" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>VEI-MRO Office</h3>
+            <p>MRO Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84757,79.17506" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>VEI-School</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84942,79.17461" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">👥</div>
+        <div class="info">
+            <h3>VEI-Shivaji Youth</h3>
+            <p>Youth Association</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84965,79.16943" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>VEI-Temple</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.85800,79.16901" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏢</div>
+        <div class="info">
+            <h3>VEI-MPDO Office</h3>
+            <p>MPDO Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84706,79.17492" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏦</div>
+        <div class="info">
+            <h3>VEI-SBI Bank</h3>
+            <p>Bank</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84564,79.37351" target="_blank">Open Map</a>
+</div>
+
+<!-- 9 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏧</div>
+        <div class="info">
+            <h3>VEI-ATM</h3>
+            <p>ATM</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84479,79.17279" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏪</div>
+        <div class="info">
+            <h3>VEI-Enterprises</h3>
+            <p>Enterprise</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84439,79.17385" target="_blank">Open Map</a>
+</div>
+<!-- 11 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚗</div>
+        <div class="info">
+            <h3>VEI-Auto Mobiles</h3>
+            <p>Automobile Shop</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84454,79.17368" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚉</div>
+        <div class="info">
+            <h3>VEI-Station</h3>
+            <p>Station</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84460,79.17305" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">💊</div>
+        <div class="info">
+            <h3>VEI-Medical Store</h3>
+            <p>Medical Store</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84498,79.17350" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">👗</div>
+        <div class="info">
+            <h3>VEI-Ladies Emporium</h3>
+            <p>Ladies Emporium</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84661,79.17140" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>VEI-Function Hall</h3>
+            <p>Function Hall</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84199,79.16664" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>VEI-Misamma Temple</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84814,79.16198" target="_blank">Open Map</a>
+</div>
+
+<!-- 17 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>VEI-TS Model School</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84325,79.14884" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚌</div>
+        <div class="info">
+            <h3>VEI-Bus Stand</h3>
+            <p>Bus Stand</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84757,79.17109" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏪</div>
+        <div class="info">
+            <h3>VEI-Sai Traders</h3>
+            <p>Traders Shop</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.84693,79.17090" target="_blank">Open Map</a>
+</div>
+
+</div>
+
+<footer>
+    <p>© 2026 Jagtial District - Velgatoor Mandal</p>
+    <p>Developed using OU & OTBI Project Template</p>
+</footer>
+
+<script>
+
+function searchPlaces() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let places = document.getElementsByClassName("place");
+
+    for (let i = 0; i < places.length; i++) {
+
+        let text = places[i].innerText.toLowerCase();
+
+        if (text.indexOf(input) > -1) {
+            places[i].style.display = "flex";
+        } else {
+            places[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
